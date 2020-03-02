@@ -1,4 +1,5 @@
 import React from "react";
+import { LabelWithHightlight } from "./components";
 
 export const findByTextOnTree = (data, text) => {
   let items = [];
@@ -8,26 +9,32 @@ export const findByTextOnTree = (data, text) => {
     if (item.children && item.children.length > 0) {
       childrenMatch = findByTextOnTree(item.children, text);
     }
-    const isMatch = item.label
+    const indexOf = item.label
       .toLocaleLowerCase()
       .indexOf(text.toLocaleLowerCase());
 
-    if (isMatch !== -1 || childrenMatch.length > 0) {
+    if (indexOf !== -1 || childrenMatch.length > 0) {
       let newLabel = item.label;
-      if (isMatch !== -1) {
+      if (indexOf !== -1) {
         newLabel = (
-          <span>
-            {newLabel.slice(0, isMatch)}
-            <span style={{ background: "yellow" }}>
-              {newLabel.slice(isMatch, isMatch + text.length)}
-            </span>
-            {newLabel.slice(text.length + isMatch)}
-          </span>
+          <LabelWithHightlight label={newLabel} textToHightlight={text} />
         );
       }
-
       items = [...items, { ...item, label: newLabel, children: childrenMatch }];
     }
   });
   return items;
+};
+
+export const getAllIds = data => {
+  let ids = [];
+
+  data.forEach(item => {
+    let childrenIds = [];
+    if (item.children && item.children.length > 0) {
+      childrenIds = getAllIds(item.children);
+    }
+    ids = [...ids, item.id, ...childrenIds];
+  });
+  return ids;
 };

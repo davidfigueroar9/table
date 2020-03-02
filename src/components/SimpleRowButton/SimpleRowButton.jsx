@@ -8,7 +8,7 @@ const SimpleRowWithButton = ({
   columms,
   open,
   onChange,
-  deep
+  depth
 }) => {
   const labelWithButton = (
     <>
@@ -28,7 +28,7 @@ const SimpleRowWithButton = ({
       bold={bold}
       label={labelWithButton}
       columms={columms}
-      deep={deep}
+      depth={depth}
     />
   );
 };
@@ -43,7 +43,7 @@ SimpleRowWithButton.propTypes = {
       amount: PropTypes.string
     })
   ).isRequired,
-  deep: PropTypes.number
+  depth: PropTypes.number
 };
 
 export default SimpleRowWithButton;

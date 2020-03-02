@@ -2,9 +2,9 @@ import React from "react";
 
 export const TableContext = React.createContext();
 
-const TableTreeToggleContext = ({ openIds, onToggle, children }) => {
+const TableTreeToggleContext = ({ expandedIds, onToggle, children }) => {
   return (
-    <TableContext.Provider value={{ openIds, onToggle }}>
+    <TableContext.Provider value={{ expandedIds, onToggle }}>
       {children}
     </TableContext.Provider>
   );

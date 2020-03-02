@@ -1,0 +1,9 @@
+.content {
+  width: 400px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-right: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import SimpleRow from "../SimpleRow";
 import SimpleRowButton from "../SimpleRowButton";
 
-const ToggleRow = ({ bold, label, columms, deep = 0, children }) => {
+const ToggleRow = ({ bold, label, columms, depth = 0, children }) => {
   const [show, setShow] = useState(false);
   return (
     <>
@@ -12,7 +12,7 @@ const ToggleRow = ({ bold, label, columms, deep = 0, children }) => {
         label={label}
         columms={columms}
         open={show}
-        deep={deep}
+        depth={depth}
         onChange={() => {
           setShow(!show);
         }}
@@ -21,7 +21,7 @@ const ToggleRow = ({ bold, label, columms, deep = 0, children }) => {
         children.map(({ children, bold, label, columms, id }) =>
           children && children.length > 0 ? (
             <ToggleRow
-              deep={deep + 1}
+              depth={depth + 1}
               key={id}
               id={id}
               bold={bold}
@@ -31,7 +31,7 @@ const ToggleRow = ({ bold, label, columms, deep = 0, children }) => {
             />
           ) : (
             <SimpleRow
-              deep={deep + 1}
+              depth={depth + 1}
               key={id}
               bold={bold}
               label={label}
@@ -45,7 +45,7 @@ const ToggleRow = ({ bold, label, columms, deep = 0, children }) => {
 
 ToggleRow.defaultProps = {
   bold: false,
-  deep: 0
+  depth: 0
 };
 
 // Recursive PropTypes: source https://bit.ly/397pioi
@@ -68,7 +68,7 @@ const ToggleRowPropTypes = {
       amount: PropTypes.string
     })
   ).isRequired,
-  deep: PropTypes.number,
+  depth: PropTypes.number,
   children: PropTypes.arrayOf(lazyToggleRowPropTypes).isRequired
 };
 

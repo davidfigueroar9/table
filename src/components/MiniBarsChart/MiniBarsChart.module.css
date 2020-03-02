@@ -1,0 +1,35 @@
+.chart {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.chartNegative {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.barNegative {
+  width: 8px;
+  background-color: #e55656;
+  margin-right: 2px;
+  border-radius: 3px;
+}
+
+.bar {
+  width: 8px;
+  background-color: #66b9f4;
+  margin-right: 2px;
+  border-radius: 3px;
+}
+
+.chartContainer {
+  height: 20px;
+  width: 100px;
+  flex-direction: column;
+  display: flex;
+  cursor: pointer;
+}

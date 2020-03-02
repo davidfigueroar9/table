@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TableTreeToggleControlled, TableTreeToggle } from "./components";
 import { rows1, columms } from "./rowData";
-import { findByTextOnTree } from "./utils";
+import { findByTextOnTree, getAllIds } from "./utils";
 import "./styles.css";
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
   };
 
   const rowsToShow = text ? findByTextOnTree(rows1, text) : rows1;
+  const expandedIds = text ? getAllIds(rowsToShow) : ids;
 
   const onToggle = id => {
     if (ids.includes(id)) {
@@ -21,14 +22,9 @@ export default function App() {
       setIds([...ids, id]);
     }
   };
+
   return (
     <div className="App">
-      {/* <TableTreeToggle
-        rows={rowsToShow}
-        title="Fiscal Year ends in December"
-        subTitle="In Millions except ratios and margins"
-        columms={columms}
-      /> */}
       <h2>Controlled table</h2>
       <input
         type="text"
@@ -42,7 +38,7 @@ export default function App() {
         title="Fiscal Year ends in December"
         subTitle="In Millions except ratios and margins"
         rows={rowsToShow}
-        openIds={ids}
+        expandedIds={expandedIds}
         onToggle={onToggle}
         columms={columms}
       />

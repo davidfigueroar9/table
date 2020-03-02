@@ -1,6 +1,88 @@
+export const rows2 = [
+  {
+    label:
+      "I failed to spot in the original question that the search string needs to be a variable. I've written another version to deal with this case that uses indexOf, so you're back to where you started. As pointed out by Wrikken in the comments, to do this for the general case with regular expressions you would need to escape special regex characters, at which point I think the regex solution becomes more of a headache than it's worth.",
+    bold: true,
+    id: "1",
+    columms: [
+      {
+        amount: "32,785"
+      },
+      {
+        amount: "31,873"
+      },
+      {
+        amount: "28,913"
+      },
+      {
+        amount: "29,740"
+      },
+      {
+        amount: "29,740"
+      },
+      {
+        amount: "32,785"
+      },
+      {
+        amount: "31,873"
+      },
+      {
+        amount: "28,913"
+      },
+      {
+        amount: "29,740"
+      },
+      {
+        amount: "29,740"
+      }
+    ],
+    children: [
+      {
+        label: "Children",
+        bold: true,
+        id: "2",
+        columms: [
+          {
+            amount: "32,785"
+          },
+          {
+            amount: "11,873"
+          },
+          {
+            amount: "18,913"
+          },
+          {
+            amount: "19,740"
+          },
+          {
+            amount: "29,740"
+          },
+          {
+            amount: "32,785"
+          },
+          {
+            amount: "31,873"
+          },
+          {
+            amount: "28,913"
+          },
+          {
+            amount: "29,740"
+          },
+          {
+            amount: "29,740"
+          }
+        ]
+      }
+    ]
+  }
+];
+
 export const rows1 = [
   {
-    label: "Assets",
+    label:
+      "I failed to spot in the original question that the search string needs to be a variable. I've written another version to deal with this case that uses indexOf, so you're back to where you started. As pointed out by Wrikken in the comments, to do this for the general case with regular expressions you would need to escape special regex characters, at which point I think the regex solution becomes more of a headache than it's worth.",
+
     bold: true,
     id: "1",
     columms: [
@@ -27,19 +109,19 @@ export const rows1 = [
 
         columms: [
           {
-            amount: "10,940"
+            amount: "-10,940"
           },
           {
-            amount: "10,182"
+            amount: "-10,182"
           },
           {
-            amount: "7,678"
+            amount: "-7,678"
           },
           {
-            amount: "29,740"
+            amount: "-29,740"
           },
           {
-            amount: "27,740"
+            amount: "-27,740"
           }
         ],
         children: [
@@ -54,7 +136,7 @@ export const rows1 = [
                 amount: "4,955"
               },
               {
-                amount: "2,198"
+                amount: "-2,198"
               },
               {
                 amount: "3,686"
@@ -219,7 +301,7 @@ export const rows1 = [
       },
       {
         label: "Non-current Assets",
-        id: "1",
+        id: "11",
         columms: [
           {
             amount: "21,855"
@@ -241,7 +323,7 @@ export const rows1 = [
       {
         label: "Assets 2",
         bold: true,
-        id: "4",
+        id: "12",
         columms: [
           {
             amount: "32,785"
@@ -262,7 +344,7 @@ export const rows1 = [
         children: [
           {
             label: "Current Assets",
-            id: "5",
+            id: "13",
 
             columms: [
               {
@@ -284,7 +366,7 @@ export const rows1 = [
             children: [
               {
                 label: "Cash",
-                id: "6",
+                id: "14",
                 columms: [
                   {
                     amount: "5,338"
@@ -305,7 +387,7 @@ export const rows1 = [
                 children: [
                   {
                     label: "Cash And Cash Equivalents",
-                    id: "4",
+                    id: "15",
                     columms: [
                       {
                         amount: "5,338"
@@ -326,7 +408,7 @@ export const rows1 = [
                   },
                   {
                     label: "Short Term Investments",
-                    id: "5",
+                    id: "16",
                     columms: [
                       {
                         amount: "-"
@@ -347,7 +429,7 @@ export const rows1 = [
                   },
                   {
                     label: "Total Cash",
-                    id: "6",
+                    id: "17",
                     bold: true,
                     columms: [
                       {
@@ -371,7 +453,7 @@ export const rows1 = [
               },
               {
                 label: "Net Receivables",
-                id: "7",
+                id: "18",
                 columms: [
                   {
                     amount: "1,128"
@@ -392,7 +474,7 @@ export const rows1 = [
               },
               {
                 label: "Inventory",
-                id: "8",
+                id: "19",
                 columms: [
                   {
                     amount: "3,581"
@@ -413,7 +495,7 @@ export const rows1 = [
               },
               {
                 label: "Other Current Assets",
-                id: "9",
+                id: "20",
                 columms: [
                   {
                     amount: "-"
@@ -434,7 +516,7 @@ export const rows1 = [
               },
               {
                 label: "Total Current Assets",
-                id: "10",
+                id: "21",
                 bold: true,
                 columms: [
                   {
@@ -458,7 +540,7 @@ export const rows1 = [
           },
           {
             label: "Non-current Assets",
-            id: "1",
+            id: "22",
             columms: [
               {
                 amount: "21,855"
